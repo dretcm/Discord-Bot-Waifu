@@ -32,7 +32,7 @@ async def waifu(ctx):
                         
                                    
 print('Bot activate...')
-bot.run('ODMyMDA3OTYyNDM5NzEyNzc4.YHdhzA.ZDu2zfpqLJZYLd0STBSP22SZKd0')  # token or bot or key.
+bot.run('token')  # token or bot or key.
 
 
 
