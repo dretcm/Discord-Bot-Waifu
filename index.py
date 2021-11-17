@@ -11,7 +11,6 @@ bot = commands.Bot(command_prefix='+', description="This is a Helper Bot") # (co
 async def say(ctx, *,  msg):
         await ctx.send(msg + ' pedo')
 
-        
 @bot.command()
 async def waifu(ctx):
         link = 'https://mywaifulist.moe/random'
@@ -21,7 +20,7 @@ async def waifu(ctx):
         string = str(soup.find_all('script', attrs={"type":"application/ld+json"}))[36:-10] # filter
         data = json.loads(string)
 
-        embed = discord.Embed(title=data['name'], color=discord.Color.blue())
+        embed = discord.Embed(title=data['givenName'], color=discord.Color.blue())
         embed.set_image(url=data['image'])
 
         message = await ctx.send(embed=embed)
@@ -30,7 +29,7 @@ async def waifu(ctx):
                 for i in f.read()[:-1]:
                         await message.add_reaction(str(i))
                         
-                                   
+                        
 print('Bot activate...')
 bot.run('token')  # token or bot or key.
 
